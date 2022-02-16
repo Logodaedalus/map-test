@@ -6,7 +6,7 @@ export default function define(runtime, observer) {
   const fileAttachments = new Map([["data.json",new URL("./files/5c0e56b44362ec8e2621299d2ddce5ac68e4e1b11e08ac4547075b0e6374d9083a589eec442479ef7876be75215b8499cf9463743191cfe01e4ca3cb826135e5",import.meta.url)]]);
   main.builtin("FileAttachment", runtime.fileAttachments(name => fileAttachments.get(name)));
   main.variable(observer()).define(["md"], function(md){return(
-md`# Temporal Force-Directed Graph
+md`# Test Temporal Force-Directed Graph
 
 This notebook visualizes a temporal network which [changes over time](/@d3/modifying-a-force-directed-graph). Each node and link has a *start* and *end* specifying its existence. The data here represents face-to-face interactions at a two-day conference. Data: [SocioPatterns](/d/89ebc0681ca51806)`
 )});
