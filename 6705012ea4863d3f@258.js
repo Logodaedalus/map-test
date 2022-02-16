@@ -94,7 +94,7 @@ Scrubber(times, {
 }
 );
   main.variable(observer("data")).define("data", ["FileAttachment"], async function(FileAttachment){return(
-JSON.parse(await FileAttachment("sfhh@4.json").text(), (key, value) => key === "start" || key === "end" ? new Date(value) : value)
+JSON.parse(await FileAttachment("data.json").text(), (key, value) => key === "start" || key === "end" ? new Date(value) : value)
 )});
   main.variable(observer("times")).define("times", ["d3","data","contains"], function(d3,data,contains){return(
 d3.scaleTime()
